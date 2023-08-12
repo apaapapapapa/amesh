@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ameame splash</title>
+</head>
+
+<body>
+    <div>
+        <label><input type="checkbox" value="factorization" checked> 因数分解</label>
+        <label><input type="checkbox" value="expansion" checked> 展開</label>
+    </div>
+    <button onclick="generateQuestion()">問題を生成</button>
+    <button onclick="showAnswer()">回答を表示</button>
+
+    <div id="questionArea"></div>
+    <div id="answerArea"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
