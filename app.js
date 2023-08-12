@@ -31,16 +31,19 @@ function generateQuestion() {
     const questions = getQuestions(unit);
     const question = getRandomElement(questions);
 
-    document.getElementById("questionArea").textContent = question.q;
-    currentAnswer = question.a;
+    document.getElementById("questionArea").textContent = `$$${question.q}$$`;
+    currentAnswer = `$$${question.a}$$`;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, "questionArea"]);
 
     deleteAnswer();
 }
 
 function showAnswer() {
     document.getElementById("answerArea").textContent = currentAnswer;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, "answerArea"]);
 }
 
 function deleteAnswer() {
     document.getElementById("answerArea").textContent = "";
 }
+
